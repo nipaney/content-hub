@@ -1,0 +1,30 @@
+<?php
+
+namespace Drupal\hub_core\EventSubscriber;
+
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
+
+/**
+ * Builds the Content Hub page output.
+ */
+class RequestSubscriber implements EventSubscriberInterface {
+
+  /**
+   * Builds the Content Hub page output.
+   */
+  public static function getSubscribedEvents() {
+    return [
+      KernelEvents::REQUEST => ['onRequest'],
+    ];
+  }
+
+  /**
+   * Builds the Content Hub page output.
+   */
+  public function onRequest(RequestEvent $event) {
+    //\Drupal::logger('hub_core')->notice('Request triggered.');
+  }
+
+}

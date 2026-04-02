@@ -1,0 +1,39 @@
+<?php
+
+namespace Drupal\hub_core\Entity;
+
+use Drupal\Core\Entity\ContentEntityBase;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Defines Hub Article entity.
+ *
+ * @ContentEntityType(
+ *   id = "hub_article",
+ *   label = @Translation("Hub Article"),
+ *   base_table = "hub_article",
+ *   entity_keys = {
+ *     "id" = "id",
+ *     "label" = "title",
+ *     "uuid" = "uuid"
+ *   }
+ * )
+ */
+class HubArticle extends ContentEntityBase {
+
+  /**
+   *
+   */
+  public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
+
+    $fields = parent::baseFieldDefinitions($entity_type);
+
+    $fields['title'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Title'))
+      ->setRequired(TRUE);
+
+    return $fields;
+  }
+
+}

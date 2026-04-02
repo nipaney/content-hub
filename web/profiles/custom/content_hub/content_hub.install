@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function hub_profile_install() {
+
+  // Create Editor role.
+  if (!Role::load('editor')) {
+    Role::create([
+      'id' => 'editor',
+      'label' => 'Editor',
+    ])->save();
+  }
+
+}

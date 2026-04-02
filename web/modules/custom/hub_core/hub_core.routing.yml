@@ -1,0 +1,7 @@
+hub_core.dashboard:
+  path: '/hub/dashboard'
+  defaults:
+    _controller: '\Drupal\hub_core\Controller\HubController::dashboard'
+    _title: 'Hub Dashboard'
+  requirements:
+    _permission: 'access hub dashboard'
