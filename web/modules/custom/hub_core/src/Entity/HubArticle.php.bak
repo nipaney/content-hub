@@ -23,7 +23,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
 class HubArticle extends ContentEntityBase {
 
   /**
-   * Builds the Content Hub page output.
+   *
    */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
 

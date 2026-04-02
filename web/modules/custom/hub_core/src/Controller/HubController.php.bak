@@ -10,7 +10,7 @@ use Drupal\Core\Controller\ControllerBase;
 class HubController extends ControllerBase {
 
   /**
-   * Builds the Content Hub page output.
+   *
    */
   public function dashboard() {
     return [

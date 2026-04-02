@@ -10,9 +10,7 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 class HubLogger {
 
   /**
-   * Entity type manager service.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   * @logger Builds the Content Hub page output.
    */
   protected $logger;
 
