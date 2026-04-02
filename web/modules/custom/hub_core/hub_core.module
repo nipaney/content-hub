@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_entity_insert().
+ */
+function hub_core_entity_insert($entity) {
+  if ($entity->getEntityTypeId() === 'node') {
+    \Drupal::logger('hub_core')->notice('Node created: @title', [
+      '@title' => $entity->label(),
+    ]);
+  }
+}

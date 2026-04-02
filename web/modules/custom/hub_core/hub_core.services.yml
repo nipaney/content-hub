@@ -1,0 +1,8 @@
+services:
+  hub_core.logger:
+    class: Drupal\hub_core\Service\HubLogger
+    arguments: ['@logger.factory']
+  hub_core.request_subscriber:
+    class: Drupal\hub_core\EventSubscriber\RequestSubscriber
+    tags:
+      - { name: event_subscriber }
