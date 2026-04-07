@@ -1,18 +1,17 @@
-uuid: ae3af0e5-9c65-45a6-be1a-45639405612e
+uuid: ea33b43d-8aeb-4268-b96b-a40c747001a1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.product.body
-    - field.field.node.product.field_product_description
-    - field.field.node.product.field_product_name
-    - node.type.product
+    - field.field.node.test.body
+    - field.field.node.test.field_test
+    - node.type.test
   module:
     - text
     - user
-id: node.product.default
+id: node.test.default
 targetEntityType: node
-bundle: product
+bundle: test
 mode: default
 content:
   body:
@@ -22,14 +21,7 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_product_description:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_product_name:
+  field_test:
     type: string
     label: above
     settings:
