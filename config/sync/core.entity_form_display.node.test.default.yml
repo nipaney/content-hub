@@ -1,23 +1,22 @@
-uuid: 446b381e-ff6e-450c-b832-8a5637bdc936
+uuid: f540a4af-5060-4667-8456-b6963442533b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.test.body
+    - field.field.node.test.field_test
+    - node.type.test
   module:
     - path
     - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.test.default
 targetEntityType: node
-bundle: page
+bundle: test
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -30,6 +29,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_test:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

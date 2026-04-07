@@ -1,19 +1,18 @@
-uuid: 0158e741-4d01-4103-8acc-f49ca55b501d
+uuid: 04cfd170-372c-4bba-9ff9-1946ff6db189
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.test.body
+    - field.field.node.test.field_test
+    - node.type.test
   module:
     - text
     - user
-_core:
-  default_config_hash: 8BgdRtLbtQ0F__o0FHSH0Mx5fvXOra9tfT1GmNKbRYw
-id: node.page.teaser
+id: node.test.teaser
 targetEntityType: node
-bundle: page
+bundle: test
 mode: teaser
 content:
   body:
@@ -22,9 +21,12 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 100
-    region: content
-  links:
     weight: 101
     region: content
-hidden: {  }
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_test: true
